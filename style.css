@@ -1,134 +1,209 @@
-*{
+/* General Styles */
+* {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.nav{
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.nav {
     background-color: rgb(4, 40, 40);
     color: white;
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-    margin-bottom: 10px;
-  
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
 }
-.firstnav{
-    text-align: center;
-}
-.fistnav h1{
-    margin-bottom: 0;
-    padding-bottom: 0;
-}
-.fistnav p{
-    margin-top: 0;
-   
-}
-.nav .secondnav{
-    display: flex;
 
+.firstnav h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
 }
-.nav .secondnav li{
-    list-style: none; 
+
+.firstnav p {
+    font-size: 1rem;
+    opacity: 0.8;
 }
-.nav .secondnav a{
+
+.secondnav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.secondnav li {
+    list-style: none;
+}
+
+.secondnav a {
     text-decoration: none;
     color: white;
+    font-weight: bold;
+    transition: 0.3s;
 }
-.nav .secondnav a:hover{
-    cursor: pointer;
-    /* background-color: blueviolet; */
-    border-bottom: 3px red solid;
+
+.secondnav a:hover {
+    border-bottom: 3px solid red;
 }
-.body{
-    margin: 10px 100px;
-    border-right: 2px solid rgb(4, 40, 40);
-    border-top-right-radius: 30px;
-    border-left: 2px solid rgb(4, 40, 40);
-    border-bottom-left-radius: 30px;
-    padding: 10px;
-    background-color: rgb(235, 229, 222);
-}
-@media screen and (max-width: 700px) {
-    .body{
-        margin: 10px;
-        /* background-color: rgb(196, 239, 239); */
-    }
-    
-}
-.body h1{
+
+/* Body Section */
+.body {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+.body h1 {
     color: rgb(13, 77, 173);
-    font-weight: 700;
-    
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
-.body h1:hover{
-    cursor: pointer;
-    color: rgb(0, 102, 254);
+
+.body p {
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
-.boddy{
+
+/* Forte and Guarantee Section */
+.boddy {
     display: flex;
-    box-sizing: border-box;
     justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 30px auto;
+    gap: 20px;
 }
-.boddy .body2{
-    width: 40%;
-    margin-left: 10px;
-    margin-right: 15px;
-    padding-left: 20px;
-    padding-top: 10px;
+
+.body2 {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
     border-top: 5px solid rgb(0, 102, 254);
     border-left: 2px solid rgb(0, 102, 254);
-    border-top-right-radius: 20px;
-    border-top-left-radius: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
 
-    
+.body2 h2 {
+    color: rgb(0, 102, 254);
+    margin-bottom: 15px;
 }
-@media screen and (max-width: 700px) {
-    .boddy {
-        /* width: 100%; */
-        display: flex;
-        flex-direction: column;
-       
-    } 
+
+.body2 p,
+.body2 ol {
+    font-size: 1rem;
 }
-.boddy .body2 li{
-    list-style-type: none;
-}
-@media screen and (max-width: 700px) {
-    .boddy .body2{
-       width: 100%;
-       margin: 15px;
-    }
-}
-.footer{
+
+/* Footer */
+.footer {
     background-color: rgb(4, 40, 40);
     color: white;
-    bottom: 0;
-   bottom: 0;
-   width: 100%;
-  margin-bottom: 0;
-   padding: 15px;
-}
-.footer ul  li {
-    list-style: none;
-    align-items: center;
     text-align: center;
-    color: aqua;
-    
+    padding: 20px;
+    margin-top: 30px;
 }
-.footer ul  li a{
+
+.footer p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer li {
+    margin: 5px 0;
+}
+
+.footer a {
     text-decoration: none;
     color: aqua;
+    font-weight: bold;
 }
-.footer ul  li:hover {
-    cursor: pointer;
+
+.footer a:hover {
     color: lightblue;
 }
-.footer ul  a:hover {
-    cursor: pointer;
-    color: lightblue;
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .secondnav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .boddy {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body {
+        margin: 10px;
+        padding: 15px;
+    }
 }
-.footer .copy{
-    text-align: center;
+/* Ensure Footer Stays at Bottom */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Floating WhatsApp & Call Buttons */
+.floating-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.floating-buttons a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-btn {
+    background-color: #25D366;
+}
+
+.call-btn {
+    background-color: #008CBA;
+}
+
+.floating-buttons a:hover {
+    opacity: 0.8;
 }
